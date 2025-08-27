@@ -20,9 +20,11 @@ function Post(form) {
             form.elements.namedItem("tipo").value,
             form.elements.namedItem("mensagem").value);
   
-}
+
 
 // Função para enviar os dados inseridos sobre contato emitindo uma mensagem de retorno//
 console.log("dados dos formulários:", data);
 alert(`Obrigado, ${data.nome}! Sua mensagem de ${data.tipo} foi enviado com sucesso.`);
 form.reset();
+
+  }
