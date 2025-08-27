@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02</title>
+</head>
+
+<body>
+    <p id="mensagem">Olá, mundo!</p>
+
+    <img id="logo" src="/Aula/img/logo-ford-256.png">
+
+    <script>
+        document.getElementById("mensagem").textContent = "Hello Word!";
+        document.getElementById("mensagem").innerHTML = "<strong>Hello Word!</strong>";
+
+        const logo = document.getElementById("logo");
+        logo.setAttribute("src", "/Aula/img/imagem_1.jpg");
+
+        const msg = document.getElementById("mensagem");
+        msg.style.color = "red";
+        msg.style.fontSize = "25px"
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01</title>
+</head>
+
+<body>
+
+    <script>
+        //quantidade de ingressos, será a base para nosso larço de repetição 
+        let quantIngressos = parseInt(prompt("Quantos ingressos você deseja comprar? "));
+
+        //total - será para acumular o valor dos ingressos
+        let total = 0;
+        const precoNormal = 50;
+        const precoMeia = 25;
+
+        for(let i = 1; i <= quantIngressos; i++){
+            let idade = parseInt(prompt(`Ingresso ${i} - Qual a idade do visitante?`));
+            let estudante = false;
+
+            if (idade > 12 && idade < 60){
+                let respostaEstudante = prompt(`Ingresso ${i} - O visitante é estudante? (sim/não)`).toLowerCase();
+                estudante = respostaEstudante === "sim" || respostaEstudante === "s";
+            }
+
+            let preco = precoNormal;
+
+            if(idade < 2){
+                preco = 0;
+            }else if (idade <= 12 || idade >= 60 || estudante){
+                preco = precoMeia;
+            }
+
+            total += preco;
+
+            console.log(`Ingresso ${i}: R$ ${preco.toFixed(2)}`);
+        }
+
+        alert(`Total a pagar por ${quantIngressos} ingressos: R$ ${total.toFixed(2)}`);
+
+    </script>
+
+</body>
+
+</html>

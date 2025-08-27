@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02</title>
+</head>
+
+<body>
+    <script>
+
+        function adicao(num1, num2) {
+            return num1 + num2;
+        }
+        function subtracao(num1, num2) {
+            return num1 - num2;
+        }
+        function multiplicacao(num1, num2) {
+            return num1 * num2;
+        }
+        function divisao(num1, num2) {
+            return num1 / num2;
+        }
+
+        let numero1 = parseFloat(prompt("Digite o primeiro número: "));
+        let numero2 = parseFloat(prompt("Digite o segundo número: "));
+
+        let operacao = prompt("Qual operação você deseja realizar? (+, -, x, /)");
+
+        let resultado;
+
+        switch (operacao) {
+            case "+":
+                resultado = adicao(numero1, numero2);
+                break;
+            case "-":
+                resultado = subtracao(numero1, numero2);
+                break;
+            case "x":
+                resultado = multiplicacao(numero1, numero2);
+                break;
+            case "/":
+                resultado = divisao(numero1, numero2);
+                break;
+            default:
+                resultado = "Operação inválida!";
+        }
+
+        alert("O resultado é: " + resultado);
+
+        alert(`O resultado é: ${resultado}`);
+
+    </script>
+</body>
+
+</html>
