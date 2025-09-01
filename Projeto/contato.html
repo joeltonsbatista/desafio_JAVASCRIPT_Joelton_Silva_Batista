@@ -49,7 +49,25 @@
                     <option>Solicitação</option>
                 </select>
 
-                <textarea name="mensagem" id="mensagemid" placeholder="Digite sua mensagem" class="fordform" required></textarea>
+                <textarea name="mensagem" id="mensagemid" placeholder="Digite sua mensagem" class="fordform"
+                        required></textarea>
+
+                    <div class="lgpd-checkbox">
+                        <p>Os dados serão mantidos em nossa base de dados, só enquanto for desejado por você. A
+                            qualquer momento, será possível editar ou remover tais dados.</p>
+
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="termosCheckbox" onchange="validarEnvio()">
+                            <label for="termosCheckbox">Sim. Li e concordo com os <a
+                                    href="https://www.ford.com.br/politica-de-privacidade/">Termos e
+                                    Condições</a>.</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="newsletterCheckbox">
+                            <label for="newsletterCheckbox">Sim. Também quero receber descontos e novidades.
+                            </label>
+                        </div>
+                    </div>
             
                 <button type="submit" id="enviarBtn">Enviar</button>
             </form>
